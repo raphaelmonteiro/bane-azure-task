@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+  "id": "c96e6363-217a-46e1-be01-b0d22b357fce",
+  "name": "bane-extension",
+  "friendlyName": "Bane Extension",
+  "description": "This is the package of the BANE sast tool from integer security.",
+  "helpMarkDown": "",
+  "category": "Utility",
+  "author": "integer",
+  "version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 0
+  },
+  "instanceNameFormat": "Echo $(banestring)",
+  "inputs": [
+    {
+      "name": "token",
+      "type": "string",
+      "label": "Enter the token for your project.",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The token referring to your project was informed when it was created on the Bane platform, or you can request a new token by going to the platform."
+    }
+  ],
+  "execution": {
+    "Node10": {
+      "target": "index.js"
+    }
+  }
+}
